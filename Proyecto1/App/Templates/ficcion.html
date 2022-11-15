@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros</title>
+</head>
+<body>
+    
+    <h1>Lista de libros de ficción</h1>
+   
+    {% for ficcion in fic %}
+
+        <ul>
+            <li>Nombre: {{ficcion.nombre}},</li>
+            <li>apellido:  {{ficcion.apellido}},</li>
+            <li>edad:  {{ficcion.edad}},</li>
+            <li>titulo:  {{ficcion.titulo}},</li>
+            <li>genero:  {{ficcion.genero}},</li>
+            <li>editorial:  {{ficcion.editorial}},</li>
+            <li>fecha:  {{ficcion.fecha}},</li>
+        </ul>
+
+    {% endfor %}
+
+</body>
+</html>
