@@ -1,0 +1,10 @@
+<p>Estamos buscando el: {{genero}}</p>
+
+{% if titulo %}
+<ul>
+{% for t1 in titulo %}
+    <li>{{t1.genero}}</li>
+    <li>{{t1.titulo}}</li>
+{% endfor %}
+</ul>
+{% endif %}

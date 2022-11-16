@@ -10,6 +10,7 @@
     
     <h1>Lista de libros de ficción</h1>
    
+    <!--
     {% for ficcion in fic %}
 
         <ul>
@@ -23,6 +24,32 @@
         </ul>
 
     {% endfor %}
+    -->
+
+    {% if miFormulario.errors %}
+    <p>Están mal los datos, revisas</p>
+    {% endif %}
+
+
+    <form action="" method="POST"> {% csrf_token %}
+
+        <table>
+
+            {{miFormulario.as_table}}
+
+        </table>
+
+        <input type="submit", value="Enviar">
+
+    </form>
+
+
+
+
+
+
+
+    <a class="navbar-brand" href="{% url 'Inicio' %}">Volver</a>
 
 </body>
 </html>

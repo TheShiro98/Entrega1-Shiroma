@@ -1,0 +1,31 @@
+<form action="" method="get">
+
+<input type="text" name="editorial" id='editorial'>
+<input type="submit" value="Buscar">
+
+</form>
+
+
+
+{% if ficcion %}
+    
+    <ul>
+        {% for editor in ficcion %}
+
+        <li>Editorial de {{editor.editorial}}</li>
+        <li>Nombre de {{editor.nombre}}</li>
+        <li>Apellido de {{editor.apellido}}</li>
+        <li>Edad de {{editor.edad}}</li>
+        <li>Genero de {{editor.genero}}</li>
+        <li>Fecha de {{editor.fecha}}</li>
+        <br>
+        {% endfor %}
+    </ul>
+
+
+{% else %}
+    <p>No hay datos</p>
+{% endif %}
+
+
+<a class="navbar-brand" href="{% url 'Inicio' %}">Volver</a>
