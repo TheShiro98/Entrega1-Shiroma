@@ -1,29 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libros</title>
-</head>
-<body>
+{% extends "padre.html" %}
+{% load static %}
     
+
+{% block contenidoQueCambia %}
     <h1>Lista de libros de novela</h1>
-<!--   
-    {% for novela in nov %}
 
-        <ul>
-            <li>Nombre: {{novela.nombre}},</li>
-            <li>apellido:  {{novela.apellido}},</li>
-            <li>edad:  {{novela.edad}},</li>
-            <li>titulo:  {{novela.titulo}},</li>
-            <li>genero:  {{novela.genero}},</li>
-            <li>editorial:  {{novela.editorial}},</li>
-            <li>fecha:  {{novela.fecha}},</li>
-        </ul>
-
-    {% endfor %}
--->
 
 {% if miFormulario.errors %}
 <p>Están mal los datos, revisas</p>
@@ -42,7 +23,4 @@
 
 </form>
 
-    <a class="navbar-brand" href="{% url 'Inicio' %}">Volver</a>
-
-</body>
-</html>
+{% endblock %}

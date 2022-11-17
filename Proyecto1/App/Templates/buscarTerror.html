@@ -1,0 +1,39 @@
+{% extends "padre.html" %}
+{% load static %}
+
+
+{% block contenidoQueCambia %}
+<h1>Buscar genero Terror</h1>
+
+<form action="" method="get">
+
+    <input type="text" name="genero" id='genero'>
+    <input type="submit" value="Buscar">
+    
+    </form>
+    
+    
+    
+    {% if terror %}
+        
+        <ul>
+            {% for editor in terror %}
+    
+            <li>Titulo de {{editor.titulo}}</li>
+            <li>Editorial de {{editor.editorial}}</li>
+            <li>Nombre de {{editor.nombre}}</li>
+            <li>Apellido de {{editor.apellido}}</li>
+            <li>Edad de {{editor.edad}}</li>
+            <li>Genero de {{editor.genero}}</li>
+            <li>Fecha de {{editor.fecha}}</li>
+            <br>
+            {% endfor %}
+        </ul>
+    
+    
+    {% else %}
+        <p>No hay datos</p>
+    {% endif %}
+    
+    
+{% endblock %}

@@ -1,3 +1,10 @@
+{% extends "padre.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Buscar editoriales de ficción</h1>
+
 <form action="" method="get">
 
 <input type="text" name="editorial" id='editorial'>
@@ -12,6 +19,7 @@
     <ul>
         {% for editor in ficcion %}
 
+        <li>Titulo de {{editor.titulo}}</li>
         <li>Editorial de {{editor.editorial}}</li>
         <li>Nombre de {{editor.nombre}}</li>
         <li>Apellido de {{editor.apellido}}</li>
@@ -28,4 +36,4 @@
 {% endif %}
 
 
-<a class="navbar-brand" href="{% url 'Inicio' %}">Volver</a>
+{% endblock %}

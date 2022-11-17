@@ -171,3 +171,18 @@ def buscar_editorial(request):
         respuesta = 'No hay datos'
 
     return render(request, 'busquedaEditorial.html',{'resupuesta':respuesta})
+
+
+
+def buscar_genero_terror(request):
+
+    if request.GET.get('genero',False):
+        genero = request.GET['genero']
+        terror = Terror.objects.filter(genero__icontains=genero)
+
+        return render(request,'buscarTerror.html',{'terror':terror})
+
+    else:
+        respuesta = 'No hay datos'
+
+    return render(request, 'buscarTerror.html',{'resupuesta':respuesta})
